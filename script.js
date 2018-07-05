@@ -42,7 +42,7 @@ function BuildArray() {
     coordArray = filecontent.split("\n"); // using the whitespaces to split String into an array
     for (let i = 1; i < coordArray.length; i++) {
         var split = coordArray[i].split(",");
-        if(split[1] != undefined){
+        if(split[1] != undefined && split[0]*1 > 51 && split[1] > 7){
             PointArray.push(new Point(split[0], split[1], split[2]));
         }
     }
