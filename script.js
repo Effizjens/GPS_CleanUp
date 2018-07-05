@@ -20,25 +20,16 @@ var ReadFile = function(event) {
 
       filecontent = reader.result; //coordinate data saved to this variable
 
-console.log(filecontent);
       
-      BuildArray();
+    BuildArray();
       
-console.log(PointArray);
-
-      DeleteDoubles();
-
-console.log(ResultArray);
+    DeleteDoubles();
       
     AverageValue();
-
-console.log(ResultArray);
     
     WriteString();
 
-      console.log(ResultStr);
-    
-      createFile(); 
+    createFile(); 
 
 	};
   reader.readAsText(input.files[0]);
@@ -130,8 +121,10 @@ download = (filename, text) => {
 function Point(lat, long, value){
 
     //attributes
-    this.lat = lat;
-    this.long = long;
+    console.log(Math.round(lat*1000)/1000);
+    
+    this.lat = Math.round(lat * 1000) / 1000;
+    this.long = Math.round(long * 1000) / 1000;
     this.value = value*1;
     this.counter = 0;
 }
