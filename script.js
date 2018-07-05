@@ -95,7 +95,10 @@ WriteString = () =>{
 }
 
 createFile = () => {
-    var name = "Test.csv";
+    var name = document.getElementById("gpsinput").value.split("\\");
+    name = name[name.length-1].split(".");
+    name = name[0];
+    name = `${name}_fixed.csv`;
     download(name, ResultStr);
 }
 
@@ -121,8 +124,6 @@ download = (filename, text) => {
 function Point(lat, long, value){
 
     //attributes
-    console.log(Math.round(lat*1000)/1000);
-    
     this.lat = Math.round(lat * 1000) / 1000;
     this.long = Math.round(long * 1000) / 1000;
     this.value = value*1;
