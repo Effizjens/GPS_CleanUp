@@ -1,5 +1,5 @@
 ﻿body {
-    background-color: #e0e0e0;
+    background-color: #e6ecf0;
 }
 h1 {
 	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
@@ -64,10 +64,6 @@ input {
 	line-height: 18.5714px;
 	color: #404040;
 	margin-top:10x; 
-}
-input:hover {
-    background-color: #4CAF50;
-    color: white;
 }
 input[type=range] {
   -webkit-appearance: none;
